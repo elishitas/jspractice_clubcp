@@ -1,0 +1,47 @@
+<!--
+    ""
+    ''
+    ``
+ ECMASript6
+ Concepto nuevo: 
+    Templete Strings
+    Se puede escribir multilinea
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string</title>
+</head>
+
+<body>
+
+    <script>
+        const nombre = `Elishitas`;
+        const edad = 32;
+
+        console.log(`Hola! Mi nombre es ` + nombre + ` y mi edad es ` + edad);
+        console.log(`Hola! Mi nombre es ${nombre} y mi edad es ${edad}`);
+
+        const examplename = `Lisa`;
+        const examplesurname = `Simpson`;
+        const hobbie = `cuidar a los animales`;
+        const age = `8`;
+
+        console.log(`Hola! Mi nombre es ` +
+            examplename +
+            ` ` +
+            examplesurname +
+            `, mi edad es ` +
+            age + ` ` +
+            `y mi hobbie preferido es ` +
+            hobbie);
+        console.log(
+            `Hola! Mi nombre es ${examplename} ${examplesurname}, mi edad es ${age} y mi hobbie preferido es ${hobbie}`
+        );
+    </script>
+</body>
+
+</html>
