@@ -1,0 +1,62 @@
+<!--
+booleano
+    Es un tipo de dato que puede ser 
+    verdadero o falso
+
+    =ASIGNACION
+
+    >
+    <
+    >=
+    <=
+    == Comparacion por valor
+    === compara por tipo y valor
+
+        compracion
+        "1" == 1 //verdadero, tiene el mismo valor pero son distintos
+        tipos de datos, el doble igual lo deja pasar
+
+
+         "1" === 1 //falso, no lo deja pasar ya que compara valor y tipo.
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booleanos</title>
+</head>
+
+<body>
+    <script>
+        let age = 19; //defini que age es 19
+        const olderThan18 = age >= 18; // olderThan18 chequea age sea mayor o igual a 18
+
+        console.log(olderThan18); //19 es mayor a 18
+
+        age = 10; //cambio mi edad
+        console.log(olderThan18); //que da el console.log?
+
+        //y ahora
+        let number = 21;
+        let olderThan21 = number >= 21;
+        console.log(olderThan21);
+        number = 10
+        olderThan21 = number >= 21;
+        console.log(olderThan21);
+
+        //el codigo se va ejecutando de arriba hacia abajo. 
+
+        const ageNow = 18;
+        const is18 = ageNow == 18
+
+        console.log(is18)
+    </script>
+
+</body>
+
+</html>
