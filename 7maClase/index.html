@@ -1,0 +1,66 @@
+<!--
+    Array es una lista de elementos
+    serie de
+        variables
+        objetos
+        strings
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <script>
+        const person1 = {
+            name: 'Elishitas',
+            surname: 'Ara'
+        }
+
+        const person2 = {
+            name: 'Vero',
+            surname: 'Aides'
+        }
+
+        //ahora para agrupar en unica variable:
+        //array de 2 elementos: Es una forma de agrupar elementos.
+        const teachers = [person1, person2];
+
+        console.log(teachers);
+        //los arrays tienen indices. Los indices son la posicion en donde esta c/u de los elementos
+        //Indice: Arranca el 0
+        //longitud: 2
+
+        //Como accedemos? Por medio del indice
+        console.log(teachers[0]);
+        console.log(teachers[1]);
+
+        //undefined es lo que nos devuelve js cuando intentamos acceder a algo que no esta definido
+        console.log(teachers[23]);
+
+        //el potencial son los metodos que vienen por defecto en js.
+        //Con el metodo podemos agregar, borrar, reubicar, etc en el array.
+
+        //metodo push: Agragamos dinamicamente al array un elemento
+
+        console.log(teachers);
+
+        teachers.push({
+            name: 'Vero',
+            surname: 'Legal'
+
+        });
+
+        console.log(teachers);
+
+        //estrutura de datos que es iterable es array, se puede recorrer, se puede dar vueltas.
+    </script>
+
+</body>
+
+</html>
