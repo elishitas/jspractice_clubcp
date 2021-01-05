@@ -1,0 +1,58 @@
+<!--
+Numbers
+
+Se puede realizar operanciones matematicas
+/  *  +  -
+Metodos para menejar numero:
+        Math.round(n);
+            aproximacion matematica, desde el 5 redonde hacia el techo
+            ej: 3.2 =  3
+                4.8 = 5
+        Math.floor(n);
+            Va a redondear hacia el piso.
+        Math.ceil(n);
+            Va a redondear hacia el techo 
+        Math.random(n);
+            Calcular numero aleatorio entre 0 y 1
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const a = 10;
+        const b = `20`;
+
+        //esto sucede solamente con +
+        console.log(typeof a);
+        console.log(typeof b);
+        console.log(a + a);
+        console.log(b + b);
+        console.log(a + b);
+        console.log(b + a);
+
+        //parsea el dato de string a number internamente y ejecuta la division. 
+
+        const girls = 3;
+        const candies = 10;
+
+        const candiesPerGirl = Math.floor(candies / girls);
+        const candiePerParent = candies - candiesPerGirl * girls;
+        //Tambien se puede hacer calculando el resto de una division
+        const candiePerParentRest = candies % girls;
+
+        console.log(`Cada chica recibira ${candiesPerGirl}`);
+        console.log(`Cada padre recibira ${candiePerParent}`);
+        console.log(`Utilizando la formula del resto el padre recibira igual a ${candiePerParentRest}`)
+    </script>
+
+</body>
+
+</html>
