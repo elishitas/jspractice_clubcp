@@ -1,0 +1,90 @@
+<!--
+    Un condicional es lo mismo que decir que si.
+    Estableci una condicion
+        Toma un camino u otro
+    Si llueve voy agarrar un paragua sino no agarro un paragua
+
+    Un camino
+    Dos caminos
+    N caminos
+
+    Ejemplo: Menor a 18 
+            Mayor a 18 menos a 65
+            Mayor a 65
+    
+    Operador logico: 
+        y | o
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores logicos y condicioneles</title>
+</head>
+
+<body>
+    <script>
+        const isRaining = true; //Si ponemos nuestra variable en false que hace?
+        //Los condicionales se escribi: If -espacio- en parentesis la condicion -espacio- Abro llave
+        //Adentro de la llave meto todas las cosas que quiero que haga si se cumple esa condicion
+        //Si queremos poner un sino inmediatamente despues del cierre de llave se colaca un else
+        //Abrimos llaves y todo las cosas.
+        if (isRaining == true) {
+            console.log('Agarro un paraguas');
+        } else {
+            console.log('No agarro ni un paraguas');
+        }
+
+        //Ejemplo de tres potenciales caminos:
+        //Los condicionales si o si se hacen de arriba hacia abajo
+        const age = 17;
+
+        if (age >= 65) { //si la edad es
+            console.log('Soy jubilado');
+        } else if (age >= 18 && age < 65) { //en cambio si la edad es mayor de 18 y menor de 65
+            console.log('Soy mayor de edad');
+        } else { //sino 
+            console.log('Soy menor de edad');
+        }
+
+        // & -> y Se tiene que cumplir todas las condiones
+        // || -> O Se tiene que cumplir una de las condiciones
+
+        const name = 'Eli'; //Cambia el nombre y vamos a ver que sucede
+        const surname = 'Ara';
+
+        if (name == 'Eli' && surname == 'Ara') {
+            console.log('Podes ingresar a ver el codigo');
+        } else {
+            console.log('Todavia no podes ingresar a ver el codigo');
+        }
+
+        //Tambien lo podemos hacer con un objeto:
+        const person = {
+            namenew: 'Lisa',
+            surnamenew: 'Simpson'
+        };
+
+        if (person.namenew == 'Lisa' && person.surnamenew == 'Simpson') {
+            console.log('Soy vegetariana');
+        } else {
+            console.log('No vives de ensalada');
+        }
+
+        //Los objetos tienen una particularidad que se agrego en ECMASript6->->Se puede deestruturar un objeto:
+
+        //        const {
+        //            namenew,
+        //            surnamenew
+        //        } = person;
+        //        if (namenew == 'Lisa' && surnamenew == 'Simpson') {
+        //            console.log('Podes ir a ver un capitulo');
+        //        } else {
+        //            console.log('Todavia no podes ir a ver ningun capitulo');
+        //        }
+    </script>
+</body>
+
+</html>
