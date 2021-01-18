@@ -1,0 +1,93 @@
+<!--
+    Las funciones son un bloque de codigo reutilizables.
+
+    Hay dos tipos de funciones:
+        Funciones de Js
+        Funciones personalizadas 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+</head>
+<p>En base a tu edad podes entrar o no a un lugar</p>
+
+<body>
+
+</body>
+<script>
+    const edad1 = 10;
+    const edad2 = 20;
+    const edad3 = 25;
+    const edad4 = 15;
+    const edad5 = 35;
+
+    //los condicionales nos dejan realizar condiciones del tipo IF
+    //Si edad es igual a mayor a 18 entonces puede entrar
+
+    if (edad1 >= 18) {
+        console.log(`Podes ingresar`);
+    } else {
+        console.log(`No podes ingresar ya que tu edad es ${edad1} y sos menor de edad`);
+    }
+
+    //y ahora tenemos que ver con todos nuestras edades si puede o no ingresar. Seguimos usando IF?
+
+    //Consideramos este codigo repetido? ->
+
+    if (edad2 >= 18) {
+        console.log(`Podes ingresar`);
+    } else {
+        console.log(`No podes ingresar ya que tu edad es ${edad2} y sos menor de edad`);
+    }
+
+    //Para solucionar esto entran en juego LAS FUNCIONES 
+    //En base de un argumento, un parametro, vamos a poder pasarle la edad de cada una de las personas
+    //El parametro es un valor que le podemos pasar a la funcion y puede ser variable, dinamico
+
+    //Como escribimos la funcion -> function nombreDeLaFuncionQueDeseas
+
+    function checkAge(age) {
+        if (age >= 18) {
+            console.log(`Puede ingresar y en este caso estamos probando como usar una funcion`);
+        } else {
+            console.log(`No puede ingresar y en este caso estamos probando como usar una funcion`);
+        }
+    }
+    //Lo que hacemos es definir la funcion
+    //Luego llamarla:
+
+    checkAge(edad1)
+    checkAge(edad2)
+    checkAge(edad3)
+    checkAge(edad4)
+    checkAge(edad5)
+    //En este caso repetimos 1 sola linea por cada entrada de datos que queremos
+
+    //La funcion que "checkAge" es una funcion personalizada que nosotras creamos
+
+    //Js nos da una serie de funciones preprogramadas
+
+    const num1 = 60
+    const num2 = 30
+
+    if (num1 > num2) {
+        console.log(`El ${num1} es mayor a ${num2}`);
+    } else if (num2 > num1) {
+        console.log(`El ${num2} es mayor a ${num1}`);
+    } else {
+        console.log(`El ${num1} y el ${num2} son iguales`)
+    }
+
+    //con las funciones preprogramadas
+    let num3 = 30;
+    let num4 = 90;
+
+    const funcionPreprogramada = Math.max(num3, num4);
+    console.log(`La funcion preprogramada nos dice que el numero ${funcionPreprogramada} es mayor`)
+</script>
+
+</html>
