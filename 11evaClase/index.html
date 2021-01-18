@@ -1,0 +1,55 @@
+<!--
+    Introduccion al DOM
+    Document Object Model
+        Es un arbol de nodos de HTML, no es estrictamente de JS
+        Cuando empezamos nuestro HTML salimos de un punto y vamos armando un arbol, es una estructura jerarquica
+        html es nuestra rama principal
+            desde esta rama van saliendo un monton de nodos
+            por ejemplo: head - body - meta 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="principal">Hola! Bienvenida</h1>
+    <p>Esto es un parrafo de prueba</p>
+    <!--Ahora en tu navegador, click derecho inspeccionar, ir al tab de elements-->
+    <!--Con js podemos modificar los elementos 'h1' y 'p'-->
+    <!--
+        Hay que aprender como seleccionar un nodo en especifico:
+        -getElementByID que nos permite selecionar un unico elemento por ID
+        getElementByClass
+        getElementByName 
+    -->
+</body>
+<script>
+    const prueba = document.getElementById("principal");
+
+
+    //lo que estamos haciendo aca es mezclar un poco html y js
+    //definimos una constante que la llamamos prueba lo igualos a document y nos da acceso a todo el arbol de nodos
+    //Seleccionamos un nodo en particular que es el principal
+
+    console.log(prueba);
+    //vamos a nuestro tab de consola.
+    //nos imprime exactamente lo mismo que se ve en consola.
+
+    // como hacemos para modificarlo?
+
+    prueba.innerHTML = 'Chau! Gracias por visitarnos'
+
+    //si sale todo bien tendria que cambiar el texto del h1
+    //innerHTML es un metodo, una funcion que viene por defecto, que nos permite modificar el contenido interno de una etiqueta
+
+    //Se puede hacer esto desde la consola? Si! En tiempo real cambia nuestro HTML
+
+    //ejemplo: Tenemos un boton y cuando hacemos click queremos que cambie el contenido del mismo. Lo vamos a ver mas adelante!
+</script>
+
+</html>
