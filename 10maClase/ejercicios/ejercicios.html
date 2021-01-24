@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Ejercicios que se puede realizar en consola</p>
+</body>
+<script>
+    //Realizar una funciona que devuelva la suma de dos numeros
+    function sum(num1, num2) {
+        console.log(num1 + num2);
+    }
+
+    //Hacer una función que reciba como parámetro un número e imprima si es par o impar
+
+    function number(number) {
+        if (number % 2 == 0) {
+            console.log(`El numero es par`);
+        } else {
+            console.log(`El numero es impar`);
+        }
+    }
+
+    //Hacer una función que reciba como parámetro un número e imprima verdadero si el número es múltiplo de 3 o 5
+
+    function multiplenumber(num) {
+        if (num % 3 == 0 || num % 5 == 0) {
+            console.log(`El numero ${num} es multiplo de 3 o de de 5`);
+        } else {
+            console.log(`El numero ${num} no es multiplo de 3 ni de 5`)
+        }
+    }
+
+    //Crear una función que reciba una variable donde se ingresa el nombre del mes como string y devuelva la cantidad de días correspondiente a ese mes
+
+    const month31 = ["enero", "marzo", "mayo", "julio", "agosto", "octubre", "diciembre"];
+    const month30 = ["abril", "junio", "septiembre", "noviembre"];
+    const month28 = ["febrero"]
+
+
+    function monthAndDays(mes) {
+        if (month31.indexOf(mes)) {
+            console.log(`El mes de ${mes} tiene 31 dias`);
+        } else if (month30.indexOf(mes)) {
+            console.log(`El mes de ${mes} tiene 30 dias`);
+        } else {
+            console.log(`El mes de ${mes} tiene 28 dias y no se puede comer noquis`);
+        }
+    }
+
+    const m31 = ["enero", "marzo", "mayo", "julio", "agosto", "octubre", "diciembre"];
+    const m30 = ["abril", "junio", "septiembre", "noviembre"]
+
+    function diasMeses(mes) {
+        if (m31.indexOf(mes) == -1 && m30.indexOf(mes) == -1) {
+            console.log(`febrero tiene 28 dias`);
+        } else if (m31.indexOf(mes) != -1) {
+            console.log(`${mes} tiene 31 dias`);
+        } else {
+            console.log(`${mes} tiene 30 dias`);
+        }
+    }
+</script>
+
+</html>
