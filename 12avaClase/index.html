@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>Primero</li>
+            <li>Segundo</li>
+            <!--Queremos obtener todos los elemento del li y ver la longitud en js, tiene errores-->
+            <br>
+            <span id="result"></span>
+        </ul>
+        <ul>
+            <li class="count">Cuarto</li>
+            <li class="count">Quinto</li>
+            <li class="count">Sexto</li>
+            <li class="count">Septimo</li>
+            <!--Queremos obtener todos los elemento del li y ver la longitud en js-->
+            <br>
+            <span id="resultCount"></span>
+        </ul>
+    </nav>
+    <div>
+        <p id="firstp" class="p">Soy el primer parrafo</p>
+        <p class="p">Soy el segundo parrafo</p>
+        <li>Tercero, ubicado en cualquier parte</li>
+    </div>
+    <p>Soy el tercer p</p>
+</body>
+<script>
+    const getLi = document.getElementsByTagName('li').length; //aca obtenemos el numero por medio de la etiqueta
+    //ahora queremos que se muestre en la pagina:
+    document.getElementById('result').innerHTML = `Actualmente tenemos en total ${getLi} listas`;
+
+
+    //Mejorando el codigo:
+    const liLength = document.getElementsByClassName("count").length;
+    const resultCount = document.getElementById("resultCount");
+    resultCount.innerHTML = `Actualmente tenemos ${liLength} listas con la clase Count`
+</script>
+
+</html>
