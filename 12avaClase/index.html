@@ -18,9 +18,10 @@
         <ul>
             <li>Primero</li>
             <li>Segundo</li>
-            <!--Queremos obtener todos los elemento del li y ver la longitud en js, tiene errores-->
+            <!--Queremos obtener todos los elemento del li y ver la longitud en js-->
             <br>
             <span id="result"></span>
+            <!--Desde nuestro js buscamos este id (result)-->
         </ul>
         <ul>
             <li class="count">Cuarto</li>
@@ -35,17 +36,18 @@
     <div>
         <p id="firstp" class="p">Soy el primer parrafo</p>
         <p class="p">Soy el segundo parrafo</p>
-        <li>Tercero, ubicado en cualquier parte</li>
+        <li>Tercero, ubicado en cualquier parte, li random </li>
     </div>
     <p>Soy el tercer p</p>
 </body>
 <script>
-    const getLi = document.getElementsByTagName('li').length; //aca obtenemos el numero por medio de la etiqueta
+    const getLi = document.getElementsByTagName('li').length; //aca obtenemos el lenght
     //ahora queremos que se muestre en la pagina:
-    document.getElementById('result').innerHTML = `Actualmente tenemos en total ${getLi} listas`;
+    document.getElementById('result').innerHTML =
+        `Actualmente tenemos en total ${getLi} listas`; //cuanta todos los li de la pagina
 
-
-    //Mejorando el codigo:
+    //Mejorando el codigo, va a contar solamente los Li con clase Count:
+    //Usamos variables -> Buena practica, mucho mas facil de leer, reutilizamos nuestra variable
     const liLength = document.getElementsByClassName("count").length;
     const resultCount = document.getElementById("resultCount");
     resultCount.innerHTML = `Actualmente tenemos ${liLength} listas con la clase Count`
