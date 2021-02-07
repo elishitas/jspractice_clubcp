@@ -1,0 +1,43 @@
+<!--clases
+    Queremos desde js agregar clases, sacar clases y hacer algo llamado toggle desde clases
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clases</title>
+</head>
+<!--Lo que queremos hacer es que este container se agrande o se achique agregando o sancando
+una clase desde la consola por medio de js.-->
+<style>
+    .container {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        transition: 1s all;
+    }
+
+    .bixbox {
+        width: 400px;
+        height: 400px;
+        transition: 1s all;
+    }
+</style>
+<!--Bix box va a participar activamente-->
+
+<body>
+    <div id="container" class="container test"></div>
+</body>
+<script>
+    const container = document.getElementById('container');
+    container
+    container.classList
+    //getter -> Lo que estamos haciendo es leer la informacion, obtenerla -> DOMTokenList
+
+    //container.classList.add('bixbox'); -> Ver que hace en tu consula
+    //container.classList.remove('bixbox'); -> Ver que hace en tu consula
+    //ante una accion la agrega y ante otra accion saca esa clase: container.classList.toggle('bixbox');
+</script>
+
+</html>
