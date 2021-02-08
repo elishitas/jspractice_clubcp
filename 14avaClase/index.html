@@ -1,0 +1,148 @@
+<!--
+    eventos
+Es una accion que hace el usuario sobre una etiqueta, sobre un nodo de nuestro DOM, 
+por ejemplo hacer algo cuando realizamos click en un boton, modificar el campo de texto, etc-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos</title>
+</head>
+
+<style>
+    .container_test1 {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        transition: 1s all;
+    }
+
+    .bixBox1 {
+        width: 400px;
+        height: 400px;
+        transition: 1s all;
+    }
+
+    .container_test2 {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        transition: 1s all;
+    }
+
+    .bixBox2 {
+        width: 400px;
+        height: 400px;
+        transition: 1s all;
+    }
+
+    .container_test3 {
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+        transition: 1s all;
+    }
+
+    .bixBox3 {
+        width: 400px;
+        height: 400px;
+        transition: 1s all;
+    }
+
+    .container_test4 {
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+        transition: 1s all;
+    }
+
+    .bixBox4 {
+        width: 400px;
+        height: 400px;
+        transition: 1s all;
+    }
+</style>
+
+<body>
+    <div id="container1" class="container_test1"></div>
+    <button onclick="toggleBixBox()">Click Me para agregar y remover</button>
+    <!--Cuando un usuario hace click en algo-->
+    <!--Creamos un atributo de HTML onClick, es un evento, lo igualamos a una funcion
+        ONClick es igual al nombre de una funcion() -> Los parentesis son necesarios para que hacerle click
+        a esa funcion se ejecute 
+        Las funciones tiene dos partes ->
+            La inicializacion o declaracion
+            La ejecucion
+    -->
+    <hr>
+
+    <div id="container2" class="container_test2"></div>
+    <button onclick="addBixBox2()">Agregar la Clase</button>
+    <button onclick="removeBixBox2()">Remover La Clase</button>
+
+    <hr>
+
+    <div id="container3" class="container_test3"></div>
+    <button onclick="addBixBox()">Agregar la Clase</button>
+    <button onclick="removeBixBox()">Remover La Clase</button>
+
+    <hr>
+
+    <div id="container4" class="container_test4"></div>
+    <button onclick="toggleBixBox4(`add`)">Agregar la Clase</button>
+    <button onclick="toggleBixBox4(`remove`)">Remover La Clase</button>
+
+
+</body>
+<script>
+    //primera forma de hacerlo:
+    function toggleBixBox() {
+        const container1 = document.getElementById('container1')
+        container1.classList.toggle('bixBox1');
+    }
+    //No la tenemos que llamar desde nuestro js porque la estamos llamando desde el html
+
+    //Segunda forma de hacer la misma funcion:
+    function addBixBox2() {
+        const container2 = document.getElementById("container2");
+        container2.classList.add("bixBox2");
+    }
+
+    function removeBixBox2() {
+        const container2 = document.getElementById("container2");
+        container2.classList.remove("bixBox2");
+
+    }
+
+    //Tercera forma de hacer la misma funcion:
+    //scope: Es el alcance que tiene una variable o una funcion
+    //En js el scope va de lo mas grande a lo mas chico -> Se encuentra afuera de la funcion y se puede usar dentro
+    //Evitamos repetir ciertas lineas de codigo
+    const container3 = document.getElementById("container3");
+
+    function addBixBox() {
+        container3.classList.add("bixBox3");
+    }
+
+    function removeBixBox() {
+        container3.classList.remove("bixBox3");
+    }
+
+    //Cuarta forma de hacer la misma funcion:
+
+    const container4 = document.getElementById("container4");
+
+    function toggleBixBox4(action) {
+        if (action == "add") {
+            container4.classList.add("bixBox4");
+        } else if (action == "remove") {
+            container4.classList.remove("bixBox4");
+        } else {
+            console.log("accion invalida");
+        }
+    }
+</script>
+
+</html>
